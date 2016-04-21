@@ -7,6 +7,13 @@ at point (or the next number on the current line).
 
 ** Installation
 
+*** Automatic
+
+This package can be installed from [[http://melpa.org/][MELPA]] (with =M-x package-install= or
+=M-x list-packages=).
+
+*** Manual
+
 For the manual installation, clone the repo, add the directory to
 =load-path= and add autoloads for the interactive commands:
 

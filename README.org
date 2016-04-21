@@ -52,11 +52,14 @@ point):
 
 - [[https://github.com/knu/operate-on-number.el][operate-on-number]]
 - [[https://github.com/chrisdone/number][number]]
+- [[https://github.com/cofi/evil-numbers][evil-numbers]]
 
 Comparing with them, =shift-number= has the following distinctions:
 
 - If there is no number at point, it operates on the next number on the
   current line.
+
+- The point does not move anywhere when a number is modified.
 
 - It is simple: only shifting up/down is available, no multiplication or
   other more complex stuff.

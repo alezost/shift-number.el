@@ -1,3 +1,7 @@
+[[http://www.gnu.org/licenses/gpl-3.0.txt][file:https://img.shields.io/badge/license-GPL_3-orange.svg]]
+[[http://melpa.org/#/shift-number][file:http://melpa.org/packages/shift-number-badge.svg]]
+[[http://stable.melpa.org/#/shift-number][file:http://stable.melpa.org/packages/shift-number-badge.svg]]
+
 ** About
 
 This Emacs package provides commands to increase and decrease the number

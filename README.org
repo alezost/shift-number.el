@@ -61,6 +61,9 @@ Comparing with them, =shift-number= has the following distinctions:
 
 - The point does not move anywhere when a number is modified.
 
+- If a number has leading zeros (for example =007=), they are preserved
+  during shifting.
+
 - It is simple: only shifting up/down is available, no multiplication or
   other more complex stuff.
 

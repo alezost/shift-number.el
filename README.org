@@ -7,7 +7,7 @@
 This Emacs package provides commands to increase and decrease the number
 at point (or the next number on the current line).
 
-[[https://raw.github.com/alezost/shift-number.el/master/demo.gif]]
+[[file:demo.gif]]
 
 ** Installation
 

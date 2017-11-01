@@ -42,7 +42,7 @@
   :group 'convenience)
 
 (defcustom shift-number-regexp
-  (rx (group (one-or-more num)))
+  (rx (group (zero-or-one "-") (one-or-more num)))
   "Regexp for `shift-number' function.
 The first parenthesized expression must match the number."
   :type 'regexp

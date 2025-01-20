@@ -97,6 +97,16 @@ the current line and change it."
           (when (> len-diff 0)
             (insert (make-string len-diff ?0)))))
       (insert new-num-str)
+
+      (cond
+       ;; If the point was exactly at the end, keep it there.
+       ((eq old-pos end)
+        (setq old-pos (point)))
+       ;; Prevent the change causing the cursor to "leave" the number,
+       ;; allowing for further adjustments.
+       (t
+        (setq old-pos (min (point) old-pos))))
+
       (goto-char old-pos)
       (when shift-number-display-message
         (message "Number %d has been changed to number %d."

@@ -53,6 +53,11 @@ The first parenthesized expression must match the number."
   :type 'boolean
   :group 'shift-number)
 
+(defcustom shift-number-negative t
+  "If non-nil, support negative numbers."
+  :type 'boolean
+  :group 'shift-number)
+
 (defun shift-number-in-regexp-p (regexp)
   "Return non-nil, if point is inside REGEXP on the current line."
   ;; The code originates from `org-at-regexp-p'.
@@ -84,11 +89,20 @@ the current line and change it."
         (error "No number on the current line"))
     (let* ((beg         (match-beginning 1))
            (end         (match-end       1))
+           (sign        (and shift-number-negative
+                             (if (eq ?- (char-before beg)) -1 1)))
            (old-num-str (buffer-substring-no-properties beg end))
            (old-num     (string-to-number old-num-str))
-           (new-num     (+ old-num n))
-           (new-num-str (number-to-string new-num)))
-      (delete-region beg end)
+           (new-num     (+ old-num (* sign n)))
+           (new-num-str (number-to-string (abs new-num))))
+      (delete-region (if (eq sign -1) (1- beg) beg) end)
+
+      ;; Handle sign flipping & negative numbers.
+      (when (< new-num 0)
+        (setq sign (- sign)))
+      (when (eq sign -1)
+        (insert "-"))
+
       ;; If there are leading zeros, preserve them keeping the same
       ;; length of the original number.
       (when (string-match-p "\\`0" old-num-str)
@@ -96,6 +110,7 @@ the current line and change it."
                            (length new-num-str))))
           (when (> len-diff 0)
             (insert (make-string len-diff ?0)))))
+
       (insert new-num-str)
       (goto-char old-pos)
       (when shift-number-display-message

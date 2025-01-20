@@ -1,4 +1,4 @@
-;;; shift-number.el --- Increase/decrease the number at point
+;;; shift-number.el --- Increase/decrease the number at point -*- lexical-binding: t -*-
 
 ;; Copyright © 2016–2017 Alex Kost
 

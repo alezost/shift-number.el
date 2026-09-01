@@ -1,10 +1,10 @@
-;;; shift-number.el --- Increase/decrease the number at point
+;;; shift-number.el --- Increase/decrease the number at point  -*- lexical-binding: t -*-
 
-;; Copyright © 2016–2017 Alex Kost
+;; Copyright © 2016–2026 Alex Kost
 
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 12 Apr 2016
-;; Version: 0.1
+;; Version: 0.2
 ;; URL: https://github.com/alezost/shift-number.el
 ;; Keywords: convenience
 

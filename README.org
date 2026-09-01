@@ -1,6 +1,4 @@
-[[http://www.gnu.org/licenses/gpl-3.0.txt][file:https://img.shields.io/badge/license-GPL_3-orange.svg]]
-[[http://melpa.org/#/shift-number][file:http://melpa.org/packages/shift-number-badge.svg]]
-[[http://stable.melpa.org/#/shift-number][file:http://stable.melpa.org/packages/shift-number-badge.svg]]
+[[https://www.gnu.org/licenses/gpl-3.0.txt][file:https://img.shields.io/badge/license-GPL_3-orange.svg]]
 
 ** About
 
@@ -10,11 +8,6 @@ at point (or the next number on the current line).
 [[file:demo.gif]]
 
 ** Installation
-
-*** Automatic
-
-This package can be installed from [[http://melpa.org/][MELPA]] (with =M-x package-install= or
-=M-x list-packages=).
 
 *** Manual
 
